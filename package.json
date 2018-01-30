@@ -1,0 +1,25 @@
+{
+  "name": "node-init",
+  "version": "1.0.0",
+  "description": "A boilerplate used at 408 solutions made above node.js express and graphql backed by postgres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a408/node-init.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "knex",
+    "postgres"
+  ],
+  "author": "Shubham Bansal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a408/node-init/issues"
+  },
+  "homepage": "https://github.com/a408/node-init#readme"
+}

@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const config = require('config').server;
 
-const {printIp, handleAsycExceptions} = require('app/util');
+const { printIp, handleAsyncExceptions } = require('app/util');
 const groute = require('./gRoute');
 
 function run() {
@@ -13,10 +13,10 @@ function run() {
 
     app.set('root', `${__dirname}/..`);
 
-    //parse application/x-www-form-urlencoded
-    app.use(bodyParser.urlencoded({extended: true}));
+    // parse application/x-www-form-urlencoded
+    app.use(bodyParser.urlencoded({ extended: true }));
     // parse application/json
-    app.use(bodyParser.json({limit: '50mb'}));
+    app.use(bodyParser.json({ limit: '50mb' }));
     // enable cors
     app.use(cors());
 
@@ -24,7 +24,7 @@ function run() {
     app.use(errorhandler());
 
     // set the base uri
-    app.set('baseUrl', config.baseURL);
+    app.set('baseUrl', config.baseUrl);
 
     // mount the routes
     app.use(groute);
@@ -39,6 +39,6 @@ function run() {
 module.exports = run;
 
 if (require.main === module) {
-    handleAsycExceptions();
+    handleAsyncExceptions();
     run();
 }

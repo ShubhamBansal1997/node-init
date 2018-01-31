@@ -4,9 +4,10 @@
   "description": "A boilerplate used at 408 solutions made above node.js express and graphql backed by postgres",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "task": "NODE_PATH=. babel-node ./app/cli.js",
     "migrate": "NODE_PATH=, babel-node migrate.js",
-    "server": "NODE_PATH=. nodemon --exec babel-node ./app/server.js"
+    "server": "NODE_PATH=. nodemon --exec babel-node ./app/server.js",
+    "nodemon:server": "NODE_PATH=. nodemon --exec \"babel-node\" ./app/server.js"
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,7 @@
     "crypto": "^1.0.1",
     "errorhandler": "^1.5.0", 
     "express": "^4.16.2",
-    "graphql": "^0.12.3",
+    "graphql": "^0.11.7",
     "graphql-tools": "^2.19.0",
     "is-email": "^1.0.0",
     "is-uuid": "^1.0.2",

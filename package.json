@@ -4,7 +4,10 @@
   "description": "A boilerplate used at 408 solutions made above node.js express and graphql backed by postgres",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "task": "NODE_PATH=. babel-node ./app/cli.js",
+    "migrate": "NODE_PATH=. babel-node migrate.js",
+    "server": "NODE_PATH=. nodemon --exec babel-node ./app/server.js",
+    "nodemon:server": "NODE_PATH=. nodemon --exec \"babel-node\" ./app/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +19,44 @@
     "knex",
     "postgres"
   ],
-  "author": "Shubham Bansal",
+  "author": "Shubham Bansal (shubhambansal17@hotmail.com)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/a408/node-init/issues"
   },
-  "homepage": "https://github.com/a408/node-init#readme"
+  "homepage": "https://github.com/a408/node-init#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^4.1.6",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-react": "^3.12.0",
+    "nodemon": "^1.12.5"
+  },
+  "dependencies": {
+    "apollo-server-express": "^1.3.2",
+    "bcrypt": "^1.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "errorhandler": "^1.5.0", 
+    "express": "^4.16.2",
+    "graphql": "^0.11.7",
+    "graphql-tools": "^2.19.0",
+    "is-email": "^1.0.0",
+    "is-uuid": "^1.0.2",
+    "lodash": "^4.17.4",
+    "merge-graphql-schemas": "^1.4.0",
+    "pg": "^7.4.1",
+    "rand-token": "^0.4.0",
+    "request-promise": "^4.2.2",
+    "shape-errors": "^1.2.0",
+    "tabel": "^2.4.0"
+  }
 }

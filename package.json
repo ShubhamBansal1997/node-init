@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "task": "NODE_PATH=. babel-node ./app/cli.js",
-    "migrate": "NODE_PATH=, babel-node migrate.js",
+    "migrate": "NODE_PATH=. babel-node migrate.js",
     "server": "NODE_PATH=. nodemon --exec babel-node ./app/server.js",
     "nodemon:server": "NODE_PATH=. nodemon --exec \"babel-node\" ./app/server.js"
   },
